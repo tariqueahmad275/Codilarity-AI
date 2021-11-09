@@ -1,0 +1,189 @@
+<html>
+    <head>
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+
+var background = document.createElement('div');
+background.style.backgroundImage = 'url(https://img.freepik.com/free-photo/dark-street-background-reflection-blue-red-neon-asphalt_129911-31.jpg?size=626&ext=jpg)';
+background.style.backgroundSize = 'cover';
+background.style.width = '100%';
+background.style.height = '100%';
+background.style.position = 'absolute';
+background.style.top = '0';
+background.style.left = '0';
+background.style.filter = 'blur(5px)';
+document.body.appendChild(background);
+
+
+//make a text "Codilarity"
+var textmain = document.createElement('div');
+textmain.innerHTML = 'Create your account';
+textmain.style.fontFamily = 'Arial';
+textmain.style.fontSize = '30px';
+textmain.style.height = '6%';textmain.style.width = '20%';
+textmain.style.color = '#ffffff';
+textmain.style.position = 'absolute';
+textmain.style.top = '30%';
+textmain.style.left = '5%';
+textmain.style.fontWeight = 'bold';
+textmain.style.zIndex = '1';
+textmain.style.opacity = '1';
+textmain.style.filter = 'blur(0px)';
+textmain.style.cursor = 'pointer';
+textmain.style.outline = 'none';
+//document.body.appendChild(textmain);
+
+//when mouse hovers add some effects like shadown in the downward direction
+textmain.onmouseover = function() {
+    textmain.style.filter = 'blur(1px)';
+    textmain.style.opacity = '0.8';
+    textmain.style.cursor = 'pointer';
+}
+
+//when mouse leaves remove the effects
+textmain.onmouseout = function() {
+    textmain.style.filter = 'blur(0px)';
+    textmain.style.opacity = '1';
+    textmain.style.cursor = 'pointer';
+}
+
+//make text more round
+textmain.style.borderRadius = '5%';
+
+
+
+
+
+var rect = document.createElement('div');
+rect.style.borderRadius = '0%';
+rect.style.width = '30%';
+rect.style.height = '100%';
+rect.style.backgroundColor = '#000000';
+rect.style.position = 'absolute';
+rect.style.top = '0%';
+rect.style.opacity = '1.0';
+rect.style.left = '0%';
+rect.style.boxShadow = '0 0 50px #000000';
+document.body.appendChild(rect);
+
+
+
+//make Google and facebook sign in button
+//make google sign in text
+var textsignin = document.createElement('button');
+textsignin.style.position = 'absolute';
+textsignin.style.fontFamily = 'Arial';
+textsignin.style.fontSize = '17px';
+textsignin.style.height = '7%';textsignin.style.width = '42%';
+textsignin.style.color = '#ffffff';
+textsignin.style.top = '60%';
+textsignin.style.left = '25%';
+textsignin.style.fontWeight = 'bold';
+textsignin.style.backgroundImage = 'url(https://developers.google.com/identity/images/btn_google_signin_light_normal_web.png)';
+textsignin.style.zIndex = '2';
+textsignin.style.opacity = '1';
+textsignin.style.filter = 'blur(0px)';
+textsignin.style.cursor = 'pointer';
+textsignin.style.borderRadius = '5%';
+rect.appendChild(textsignin);
+
+//on clicking the textsignin button, go to href="/auth/google"
+textsignin.onclick = function() {
+    window.location.href = '/auth/google';
+}
+
+
+//make facebook sign in text
+var textsignin1 = document.createElement('button');
+textsignin1.style.fontFamily = 'Arial';
+textsignin1.style.fontSize = '17px';
+textsignin1.style.height = '6%';textsignin1.style.width = '45%';
+textsignin1.style.color = '#ffffff';
+textsignin1.style.background = '#0C84FF';
+textsignin1.style.position = 'absolute';
+textsignin1.style.top = '70%';
+textsignin1.style.left = '24%';
+textsignin1.style.fontWeight = 'bold';
+textsignin1.style.backgroundImage = 'url(https://i.stack.imgur.com/ZW4QC.png)';
+textsignin1.style.zIndex = '2';
+textsignin1.style.opacity = '1';
+textsignin1.style.filter = 'blur(0px)';
+textsignin1.style.cursor = 'pointer';
+textsignin1.style.borderRadius = '5%';
+rect.appendChild(textsignin1);
+
+//Make a text explaining signin process
+var textsignin2 = document.createElement('div');
+textsignin2.innerHTML = 'You are good to go!';
+textsignin2.style.fontFamily = 'Arial';
+textsignin2.style.fontSize = '33px';
+textsignin2.style.height = '6%';textsignin2.style.width = '90%';
+textsignin2.style.color = '#ffffff';
+textsignin2.style.position = 'absolute';
+textsignin2.style.top = '50%';
+textsignin2.style.left = '15%';
+textsignin2.style.fontWeight = 'bold';
+textsignin2.style.zIndex = '2';
+textsignin2.style.opacity = '1';
+textsignin2.style.filter = 'blur(0px)';
+textsignin2.style.cursor = 'pointer';
+textsignin2.style.outline = 'none';
+rect.appendChild(textsignin2);
+
+textsignin2.onmouseover = function() {
+    textsignin2.style.color = '#00B2FF';
+}
+
+// when mouse leaves textsignin2 show color font #ffffff
+textsignin2.onmouseout = function() {
+    textsignin2.style.color = '#ffffff';
+}
+
+//make text more round
+textsignin2.style.borderRadius = '5%';
+
+
+var textsignin3 = document.createElement('div');
+textsignin3.innerHTML = 'AI will code for you, join over 27 Million developers.';
+textsignin3.style.fontFamily = 'Arial black';
+textsignin3.style.fontSize = '25px';
+textsignin3.style.height = '6%';textsignin3.style.width = '40%';
+textsignin3.style.color = '#ffffff';
+textsignin3.style.position = 'absolute';
+textsignin3.style.top = '40%';
+textsignin3.style.left = '45%';
+textsignin3.style.cursor = 'pointer';
+textsignin3.style.outline = 'none';
+textsignin3.style.fontWeight = 'bold';
+textsignin3.style.textAlign = 'center';
+document.body.appendChild(textsignin3);
+
+// Codilarity Logo
+
+var img = document.createElement('img');
+img.style.position = 'absolute';
+img.src = 'https://github.com/ashwin-2001/Codilarity/blob/main/C%20rect%20business%20card.png?raw=true';
+rect.appendChild(img);
+
+/* make it small */
+img.style.width = '400px';
+img.style.height = '200px';
+img.style.left = '2%';
+img.style.top = '20%';
+
+var line = document.createElement('div');
+line.style.height = '0.3%';
+line.style.position = 'absolute';
+line.style.width = '100%';
+line.style.left = '0%';
+line.style.top = '45%';
+line.style.background = 'linear-gradient(to right, #000000, #F312CF, #00B2FF, #000000)';
+rect.appendChild(line);
+
+
+
+
+});
+        </script>
+    </head>
+</html>
